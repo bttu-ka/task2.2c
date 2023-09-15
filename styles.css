@@ -1,0 +1,116 @@
+
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.trip-planner {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.trip-planner input {
+    padding: 10px;
+    width: 70%;
+}
+
+
+
+.trip-planner .input-container {
+    display: flex;
+    align-items: center;
+}
+
+.trip-planner label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.trip-planner ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.trip-planner li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.trip-planner label {
+    display: block; 
+    position: relative; 
+    padding-left: 30px; 
+}
+
+
+/* When the checkbox is checked, style the label */
+.task-checkbox:checked + label {
+
+    background-color: #f9f9f9; 
+}
+
+/* Style for the checkmark */
+.checkmark {
+    position: absolute; 
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px; 
+    width: 15px; 
+    border: 1px solid #333; 
+    background-color: transparent; 
+}
+
+/* Style for the checkmark when checked */
+.task-checkbox:checked + label .checkmark {
+    background-color: #333; 
+}

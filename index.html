@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelScape - Your Ultimate Travel Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TravelScape</h1>
+        <p>Your Ultimate Travel Companion</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Trip Planner</a></li>
+            <li><a href="user-profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <section class="featured-destinations">
+    
+    </section>
+
+    
+    <div id="app">
+        <section class="trip-planner">
+            <h2>Trip Planner</h2>
+            <div class="input-container">
+                <input
+                    id="taskInput"
+                    v-model="newTask.task"
+                    @keyup.enter="addTask"
+                    placeholder="Plan your trips here!"
+                />
+                <input
+                    type="date"
+                    id="dateInput"
+                    v-model="newTask.date"
+                />
+                <button @click="addTask">Add</button>
+                <button @click="deleteSelected">Delete
+                </button>
+            </div>
+            <ul>
+                <li v-for="(task, index) in tasks" :key="index">
+                    <input
+                        type="checkbox"
+                        v-model="selectedTasks"
+                        :value="index"
+                        class="task-checkbox"
+                    />
+                    <span class="checkmark"></span>
+                    <label>{{ task.task }}</label>
+                    <span class="date">{{ task.date }}</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 TravelScape</p>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.13/dist/vue.global.min.js"></script>
+    <script src="app.js"></script> 
+</body>
+</html>
